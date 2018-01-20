@@ -113,9 +113,16 @@
 
 	const update = _ =>
 	{
-		//console.log('Xablau')
-		update()
-		//window.requestAnimationFrame(update)//
+		//todo o codico deve estar antes do window.request
+		window.requestAnimationFrame(update)
 	}
 	update()//fora da função vc tá chamando ela pra rodar
+
+/*
+	const func0 = a => a // retorn a
+	const func1 = a => { a } // retorn nada
+*/
+	const random = ( inicio, fim ) => Math.floor( Math.random() * ( fim - inicio + 1 ) ) + inicio
+
+	console.log( random( -3, 3 ) )
 </script>
